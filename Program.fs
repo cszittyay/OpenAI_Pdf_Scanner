@@ -12,7 +12,17 @@ let apiKey =
     | null | "" -> failwith "Definí OPENAI_API_KEY en el entorno."
     | v -> v
 
-let model = "gpt-5"   // un modelo multimodal que soporte PDF + JSON mode
+(*
+    gpt-5: facturas con múltiples layouts, tablas densas y validaciones cruzadas (totales vs. sumas de líneas, períodos, etc.).
+
+    gpt-4.1: extracción estable + JSON muy limpio (cuando el costo/latencia de gpt-5 no sea necesario).
+
+    gpt-4o: PDFs con artefactos de escaneo, sellos, o fotos de facturas.
+
+    gpt-4o-mini: endpoints de “pre-parseo” rápido donde luego validás con reglas server-side.
+*)
+
+let model = "gpt-4.1"   // un modelo multimodal que soporte PDF + JSON mode
 
 let JSON_OPTIONS =
     let o = JsonSerializerOptions(WriteIndented = true)
