@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ChatGPT5scanner": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\cszit\\Downloads\\Facturas\\Invoice-660404.pdf\""
+    }
+  }
+}
