@@ -6,6 +6,11 @@ open System.Text
 open System.Text.Json
 open System.Text.Json.Nodes
 
+
+// Realiza la conversión de PDF a texto en formato JSON usando la API de OpenAI.
+// El modelo que utiliza es GPT-4.1 que soporta PDF + JSON mode.
+
+
 // ================= Config =================
 let apiKey =
     match Environment.GetEnvironmentVariable("OPENAI_API_KEY") with
@@ -31,13 +36,16 @@ let JSON_OPTIONS =
 // ================= Util =================
 let uploadPdfAndGetFileId (http: HttpClient) (pdfPath:string) =
     use form = new MultipartFormDataContent()
+    printfn "Analizando el PDF: %s" pdfPath
     let fileContent = new StreamContent(File.OpenRead(pdfPath))
     fileContent.Headers.ContentType <- MediaTypeHeaderValue("application/pdf")
+
     // purpose recomendado para usar archivos como input del modelo:
     // "user_data" (o el que indique tu flujo) 
     // https://platform.openai.com/docs/guides/pdf-files
     form.Add(StringContent("user_data"), "purpose")
     form.Add(fileContent, "file", Path.GetFileName(pdfPath))
+
 
     let resp = http.PostAsync("files", form).Result
     let raw  = resp.Content.ReadAsStringAsync().Result

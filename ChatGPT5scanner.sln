@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36511.14 d17.14
+VisualStudioVersion = 17.14.36511.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ChatGPT5scanner", "ChatGPT5scanner.fsproj", "{9CA88A9D-9918-4BD8-B87D-8A87FC1B7A6C}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "OpenAI_Pdf_Scanner", "OpenAI_Pdf_Scanner.fsproj", "{9CA88A9D-9918-4BD8-B87D-8A87FC1B7A6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

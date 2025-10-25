@@ -2,7 +2,7 @@
   "profiles": {
     "ChatGPT5scanner": {
       "commandName": "Project",
-      "commandLineArgs": "\"C:\\Users\\cszit\\Downloads\\CCE001221FI1-TF-000008963.pdf\""
+      "commandLineArgs": "\"..\\..\\..\\PDFs\\CCE001221FI1-TF-000008963.pdf\""
     }
   }
 }
