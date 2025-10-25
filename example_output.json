@@ -1,0 +1,37 @@
+{
+  "numero_factura": "FACT-2024-001",
+  "fecha": "2024-01-15",
+  "vendedor": {
+    "nombre": "Empresa Ejemplo S.L.",
+    "direccion": "Calle Principal 123, 28001 Madrid",
+    "cif": "B12345678"
+  },
+  "cliente": {
+    "nombre": "Cliente Ejemplo SA",
+    "direccion": "Avenida Secundaria 456, 08001 Barcelona",
+    "cif": "A87654321"
+  },
+  "items": [
+    {
+      "descripcion": "Servicio de consultoría",
+      "cantidad": 10,
+      "precio_unitario": 100.00,
+      "total": 1000.00
+    },
+    {
+      "descripcion": "Desarrollo de software",
+      "cantidad": 20,
+      "precio_unitario": 75.00,
+      "total": 1500.00
+    }
+  ],
+  "subtotal": 2500.00,
+  "impuestos": {
+    "tipo": "IVA",
+    "porcentaje": 21,
+    "monto": 525.00
+  },
+  "total": 3025.00,
+  "metodo_pago": "Transferencia bancaria",
+  "notas": "Pago a 30 días. Cuenta bancaria: ES91 2100 0418 4502 0005 1332"
+}
