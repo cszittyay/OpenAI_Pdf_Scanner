@@ -8,7 +8,6 @@ import os
 import sys
 import json
 import argparse
-from pathlib import Path
 from typing import Optional, Dict, Any
 
 try:
@@ -115,9 +114,12 @@ Responde ÚNICAMENTE con el JSON estructurado, sin texto adicional."""
             # Remove markdown code blocks if present
             if json_text.startswith("```"):
                 lines = json_text.split('\n')
-                json_text = '\n'.join(lines[1:-1]) if len(lines) > 2 else json_text
-                if json_text.startswith("json"):
-                    json_text = json_text[4:].strip()
+                if len(lines) > 2:
+                    json_text = '\n'.join(lines[1:-1])
+                    if json_text.startswith("json"):
+                        json_text = json_text[4:].strip()
+                elif len(lines) == 2:
+                    json_text = ""
             
             return json.loads(json_text)
         

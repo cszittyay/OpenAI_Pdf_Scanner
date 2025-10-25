@@ -124,6 +124,7 @@ OpenAI_Pdf_Scanner/
 ├── requirements.txt        # Dependencias Python
 ├── .env.example           # Plantilla de configuración
 ├── .gitignore            # Archivos ignorados por git
+├── example_output.json   # Ejemplo de salida JSON
 └── README.md             # Documentación
 ```
 
